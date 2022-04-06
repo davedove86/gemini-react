@@ -10,8 +10,7 @@ const Widget = ({ type }) => {
 
   let data;
 
-  // tempoary data
-  const amount = 100;
+  // Temp data
   const percentage = 20;
 
     switch (type) {
@@ -20,6 +19,7 @@ const Widget = ({ type }) => {
           title: "Premises",
           link: "/premise",
           linkTitle: "See all premises",
+          amount: 126,
           icon:(
             <HomeWorkOutlinedIcon className="icon" style={{backgroundColor:"rgba(100, 57, 255, 0.10)", color:"#6439ff"}}/>
           )
@@ -30,6 +30,7 @@ const Widget = ({ type }) => {
             title: "Persons",
             link: "/person",
             linkTitle: "See all persons",
+            amount: 287,
             icon:(
               <PersonOutlineOutlinedIcon className="icon" style={{backgroundColor:"rgba(100, 57, 255, 0.10)", color:"#6439ff"}}/>
             )
@@ -37,9 +38,10 @@ const Widget = ({ type }) => {
           break;
         case "orders":
         data={
-          title: "Orders",
-          link: "/orders",
-          linkTitle: "See all orders",
+          title: "Team Tasks",
+          link: "/tasks",
+          linkTitle: "See all tasks",
+          amount: 352,
           icon:(
             <FolderOutlinedIcon className="icon" style={{backgroundColor:"rgba(100, 57, 255, 0.10)", color:"#6439ff"}}/>
           )
@@ -47,9 +49,10 @@ const Widget = ({ type }) => {
         break;
         case "tasks":
         data={
-          title: "Tasks",
+          title: "Incomplete Actions",
           link: "/tasks",
           linkTitle: "See all tasks",
+          amount: 12,
           icon:(
             <ArticleOutlinedIcon className="icon" style={{backgroundColor:"rgba(100, 57, 255, 0.10)", color:"#6439ff"}}/>
           )
@@ -63,7 +66,7 @@ const Widget = ({ type }) => {
     <div className="widget">
       <div className="left">
         <span className="title">{data.title}</span>
-        <span className="counter">{amount}</span>
+        <span className="counter">{data.amount}</span>
         <Link to={data.link} style={{ textDecoration: "none" }}>
         <span className="link">{data.linkTitle}</span>
         </Link>

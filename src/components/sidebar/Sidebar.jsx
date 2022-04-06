@@ -13,18 +13,23 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="top"><span className="logo">Gemini</span></div>
+      <div className="top">
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">Gemini</span>
+        </Link>
+      </div>
       <hr />
       <div className="center">
         <ul>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <li>
             <DashboardOutlinedIcon className="icon"/><span>Dashboard</span>
           </li>
+        </Link>
 
           <Link to="/premise" style={{ textDecoration: "none" }}>
           <li>
             <HomeWorkOutlinedIcon className="icon"/><span>Premise</span>
-
           </li>
           </Link>
 
@@ -34,34 +39,44 @@ const Sidebar = () => {
           </li>
           </Link>
           <p className="title">Shortcuts</p>
+
+          <Link to="/tasks" style={{ textDecoration: "none" }}>
           <li>
             <ArticleOutlinedIcon className="icon"/><span>Tasks</span>
           </li>
+          </Link>
 
+          <Link to="/reports" style={{ textDecoration: "none" }}>
           <li>
             <InsertChartOutlinedIcon className="icon"/><span>Reports</span>
           </li>
+          </Link>
+
           <p className="title">System</p>
+
+          <Link to="/help" style={{ textDecoration: "none" }}>
           <li>
             <HelpOutlineIcon className="icon"/><span>Help</span>
           </li>
+          </Link>
 
+          <Link to="/settings" style={{ textDecoration: "none" }}>
           <li>
             <SettingsOutlinedIcon className="icon"/><span>Settings</span>
           </li>
+          </Link>
+
           <p className="title">User</p>
+          <Link to="/profile" style={{ textDecoration: "none" }}>
           <li>
             <AccountCircleOutlinedIcon className="icon"/><span>Profile</span>
           </li>
+          </Link>
 
           <li>
             <LogoutOutlinedIcon className="icon"/><span>Logout</span>
           </li>
         </ul>
-      </div>
-      <div className="colorOptionWrap">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
       </div>
     </div>
   )
