@@ -1,6 +1,6 @@
 .app.dark {
   background-color: #222;
-  color: rgb(156, 156, 156);
+  color: rgb(229, 229, 229);
 
   .chartGrid {
     stroke: rgba(228, 228, 228, 0.219);
@@ -10,35 +10,35 @@
     background-color: #222;
 
     .tableCell {
-      color: gray;
+      color: rgb(229, 229, 229);
 
       .status {
-        color: gray;
+        color: rgb(229, 229, 229);
       }
     }
   }
 
   .navbar {
-    color: rgb(156, 156, 156);
-    border-color: rgb(156, 156, 156);
+    color: rgb(229, 229, 229);
+    border-color: rgb(229, 229, 229);
 
     .search {
-      border-color: rgb(156, 156, 156);
+      border-color: rgb(229, 229, 229);
     }
   }
 
   .sidebar {
     background-color: #222;
-    color: rgb(156, 156, 156);
+    color: rgb(229, 229, 229);
 
     .top {
       .logo {
-        color: rgb(156, 156, 156);
+        color: rgb(229, 229, 229);
       }
     }
 
     hr {
-      border-color: rgb(156, 156, 156);
+      border-color: rgb(229, 229, 229);
     }
 
     ul {
@@ -48,19 +48,23 @@
         }
 
         .icon {
-          color: rgb(156, 156, 156);
+          color: rgb(229, 229, 229);
         }
       }
     }
   }
+
+  .link {
+    color: rgb(229, 229, 229);
+  }
   .datatable {
     .datagrid {
-      color: gray;
+      color: rgb(229, 229, 229);
       border: none;
 
       .viewButton,
       .deleteButton {
-        color: gray;
+        color: rgb(229, 229, 229);
         border: none;
       }
     }
@@ -69,6 +73,6 @@
   input,
   option {
     background-color: transparent;
-    color: gray;
+    color: rgb(229, 229, 229);
   }
 }

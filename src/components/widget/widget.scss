@@ -6,7 +6,7 @@
   -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
   box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
   border-radius: 10px;
-  height: 100px;
+  height: 100%;
 
   .left,
   .right {
@@ -20,9 +20,15 @@
       color: reg(160, 160, 160);
     }
 
+    .subTitle {
+      font-size: 12px;
+      color: reg(160, 160, 160);
+    }
+
     .counter {
       font-size: 28px;
       font-weight: 300;
+      margin: 12px 0;
     }
     .link {
       width: max-content;

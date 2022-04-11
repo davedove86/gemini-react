@@ -1,16 +1,42 @@
 import "./datatable.scss";
 import "../../style/dark.scss";
 import { DataGrid } from '@mui/x-data-grid';
-import { dataColumns, dataRows } from "../../dataTableSource";
+import { dataColumns } from "../../dataTableSource";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { collection, getDocs, deleteDoc, doc, onSnapshot } from "firebase/firestore";
+import {db} from "../../firebase";
 
 
 const Datatable = () => {
-  const [data, setData] = useState(dataRows)
+  const [data, setData] = useState([]);
 
-  const handleDelete = (id)=> {
-    setData(data.filter((item) => item.id !== id))
+  useEffect(() => {
+  // Listen (Realtime)
+  const unsub = onSnapshot(collection(db, "persons"), (snapshot) => {
+    let list = [];
+    snapshot.forEach((doc) => {
+      list.push({id: doc.id, ...doc.data()});
+    });
+    setData(list);
+}, (error) => {
+  console.log(error);
+});
+
+return () => {
+  unsub();
+}
+  },[]);
+
+  const handleDelete = async(id)=> {
+    try{
+      await deleteDoc(doc(db, "persons", id));
+      setData(data.filter((item) => item.id !== id))
+
+    } catch(err) {
+      console.log(err);
+    }
+
   }
 
   const actionColumn = [
@@ -39,7 +65,7 @@ const Datatable = () => {
         </Link>
       </div>
 
-      <div style={{ height: "630px", width: '100%' }}>
+      <div style={{ height: "100%", width: '100%' }}>
       <DataGrid className="datagrid"
         rows={data}
         columns={dataColumns.concat(actionColumn)}

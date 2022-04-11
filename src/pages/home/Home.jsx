@@ -15,12 +15,12 @@ const Home = () => {
         <div className="widgets">
           <Widget type="premise"/>
           <Widget type="person"/>
-          <Widget type="orders"/>
           <Widget type="tasks"/>
+          <Widget type="orders"/>
         </div>
         <div className="charts">
           <Featured />
-          <Chart title={"Tempoary Event Notices"} aspect={2 / 1}/>
+          <Chart title={"Temporary Event Notices"} aspect={2 / 1}/>
         </div>
           <div className="listContainer">
             <div className="listTitle">Live Temporary Event Notices</div>

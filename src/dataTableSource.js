@@ -1,32 +1,18 @@
 export const dataColumns = [
-  { field: "id", headerName: "id", width: "150" },
+  { field: "id", headerName: "id", width: "200" },
   {
-    field: "image",
+    field: "img",
     headerName: "image",
-    width: "150",
+    width: "100",
     renderCell: (params) => {
       return (
         <img src={params.value} alt={params.value} className="personImage" />
       );
     },
   },
-  { field: "first_name", headerName: "First Name", width: "150" },
-  { field: "last_name", headerName: "Last Name", width: "150" },
-  // {
-  //   field: "address",
-  //   headerName: "address",
-  //   width: "150",
-  //   renderCell: (params) => {
-  //     return (
-  //       <div>
-  //         <p>{params.value.street}</p>
-  //         <p>{params.value.city}</p>
-  //         <p>{params.value.zip}</p>
-  //       </div>
-  //     );
-  //   },
-  // },
-  { field: "dob", headerName: "DOB", width: "150" },
+  { field: "personfirstname", headerName: "First Name", width: "150" },
+  { field: "personlastname", headerName: "Last Name", width: "150" },
+  { field: "persondob", headerName: "DOB", width: "150" },
   // add age column with dynamic age value
 ];
 

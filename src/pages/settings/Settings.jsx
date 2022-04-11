@@ -18,8 +18,8 @@ const Settings = () => {
         <br />
         <h2>System Color Modes</h2>
         <div className="colorOptionWrap">
-        <div className="colorOption" onClick={()=> dispatch({type:"LIGHT"})}></div>
-        <div className="colorOption" onClick={()=> dispatch({type:"DARK"})}></div>
+          <div className="colorOption" onClick={()=> dispatch({type:"LIGHT"})}></div>
+          <div className="colorOption" onClick={()=> dispatch({type:"DARK"})}></div>
       </div>
       </div>
     </div>

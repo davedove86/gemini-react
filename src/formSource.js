@@ -1,41 +1,41 @@
 export const personInputs = [
+  // {
+  //   id: "personurn",
+  //   label: "Username",
+  //   type: "text",
+  //   placeholder: "john_doe",
+  // },
   {
-    id: 1,
-    label: "Username",
-    type: "text",
-    placeholder: "john_doe",
-  },
-  {
-    id: 2,
+    id: "personfirstname",
     label: "First Name",
     type: "text",
     placeholder: "John",
   },
   {
-    id: 3,
+    id: "personlastname",
     label: "Last Name",
     type: "text",
     placeholder: "Doe",
   },
   {
-    id: 4,
+    id: "persondob",
     label: "DOB",
     type: "date",
   },
   {
-    id: 5,
+    id: "persongender",
     label: "Gender",
     type: "text",
     placeholder: "Enter your gender",
   },
   {
-    id: 6,
+    id: "personemail",
     label: "Email",
     type: "email",
     placeholder: "Enter your email",
   },
   {
-    id: 7,
+    id: "personaddress",
     label: "Address",
     type: "text",
     placeholder: "Enter your address",
