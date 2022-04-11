@@ -53,9 +53,9 @@
         .counter {
           width: 15px;
           height: 15px;
-          background-color: red;
+          background-color: var(--red);
           border-radius: 50%;
-          color: #fff;
+          color: var(--white);
           display: flex;
           align-items: center;
           justify-content: center;

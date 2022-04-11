@@ -17,17 +17,17 @@
     border-radius: 5px;
 
     &.Approved {
-      color: green;
+      color: var(--green);
       background-color: rgba(0, 128, 0, 0.15);
     }
 
     &.Pending {
-      color: goldenrod;
+      color: var(--yellow);
       background-color: rgba(218, 165, 32, 0.15);
     }
 
     &.Rejected {
-      color: red;
+      color: var(--red);
       background-color: rgba(255, 0, 0, 0.15);
     }
   }
