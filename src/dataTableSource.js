@@ -13,7 +13,9 @@ export const dataColumns = [
   { field: "personfirstname", headerName: "First Name", width: "150" },
   { field: "personlastname", headerName: "Last Name", width: "150" },
   { field: "persondob", headerName: "DOB", width: "150" },
-  // add age column with dynamic age value
+  { field: "persongender", headerName: "Gender", width: "150" },
+  { field: "personaddress", headerName: "Address", width: "200" },
+  { field: "personpostcode", headerName: "Postcode", width: "150" },
 ];
 
 export const dataRows = [

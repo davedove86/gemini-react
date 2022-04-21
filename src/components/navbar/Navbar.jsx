@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="search">
           <input type="text" placeholder="Search..." />
-          <SearchOutlinedIcon/>
+          <SearchOutlinedIcon style={{color:"#fff"}}/>
         </div>
         <div className="items">
           <Link to="#" style={{textDecoration:"none"}}>

@@ -37,6 +37,7 @@
 
   .amount {
     font-size: 30px;
+    margin-top: 0.5rem;
   }
 
   .description {
@@ -46,11 +47,17 @@
     text-align: center;
   }
 
+  .link {
+    font-size: 0.8rem;
+    border-bottom: 1px solid gray;
+  }
+
   .summary {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 3rem;
 
     .item {
       text-align: center;

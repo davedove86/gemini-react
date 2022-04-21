@@ -9,7 +9,9 @@ const Person = () => {
       <Sidebar/>
       <div className="homeContainer">
         <Navbar/>
-        <Datatable/>
+        <section>
+          <Datatable/>
+        </section>
       </div>
     </div>
   )

@@ -9,7 +9,9 @@ const Premise = () => {
       <Sidebar/>
       <div className="homeContainer">
         <Navbar/>
-        <h1>Premises</h1>
+        <section>
+          <h1>Premises</h1>
+        </section>
       </div>
     </div>
   )

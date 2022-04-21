@@ -8,7 +8,9 @@ const Help = () => {
       <Sidebar/>
       <div className="homeContainer">
         <Navbar/>
-        <h1>Help</h1>
+        <section>
+          <h1>Help</h1>
+        </section>
       </div>
     </div>
   )

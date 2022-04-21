@@ -113,7 +113,7 @@ const Widget = ({ type }) => {
         <span className="subTitle">Total number of {data.title}</span>
         <span className="counter">{amount}</span>
         <Link to={data.link} style={{ textDecoration: "none" }}>
-        <span className="link">{data.linkTitle}</span>
+          <span className="link">{data.linkTitle}</span>
         </Link>
       </div>
       <div className="right">

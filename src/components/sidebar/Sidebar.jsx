@@ -9,16 +9,17 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { Link } from "react-router-dom";
+import logo from '../../img/logo.svg';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Gemini</span>
+        <Link to="/" style={{ textDecoration: "none" }} className="logo-wrapper">
+          <img src={logo} alt="Gemini Logo" className="logo" />
+          <span>Gemini</span>
         </Link>
       </div>
-      <hr />
       <div className="center">
         <ul>
         <Link to="/" style={{ textDecoration: "none" }}>
