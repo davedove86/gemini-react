@@ -44,16 +44,18 @@ const Widget = ({ type }) => {
           title: "Tasks",
           link: "/tasks",
           linkTitle: "See all tasks",
+          query: "tasks",
           icon:(
             <FolderOutlinedIcon className="icon" style={{backgroundColor:"rgba(100, 57, 255, 0.10)", color:"#6439ff"}}/>
           )
         };
         break;
-        case "orders":
+        case "reports":
         data={
-          title: "Incomplete Actions",
-          link: "/orders",
-          linkTitle: "See all tasks",
+          title: "Active Reports",
+          link: "/reports",
+          linkTitle: "See all reports",
+          query: "reports",
           icon:(
             <ArticleOutlinedIcon className="icon" style={{backgroundColor:"rgba(100, 57, 255, 0.10)", color:"#6439ff"}}/>
           )
@@ -70,11 +72,20 @@ const Widget = ({ type }) => {
         const lastMonth = new Date(new Date().setMonth(today.getMonth() - 1));
         const prevMonth = new Date(new Date().setMonth(today.getMonth() - 2));
 
+        // Fetch all data from firebase
+        const allDatesQuery = query(
+          collection(db, data.query),
+          where("timeStamp", "<=", today)
+        );
+
+        // Fetch data from last month
         const lastMonthQuery = query(
           collection(db, data.query),
           where("timeStamp", "<=", today),
           where("timeStamp", ">", lastMonth)
         );
+
+        // Fetches data from previous month
         const prevMonthQuery = query(
           collection(db, data.query),
           where("timeStamp", "<=", lastMonth),
@@ -83,31 +94,33 @@ const Widget = ({ type }) => {
 
         const lastMonthData = await getDocs(lastMonthQuery);
         const prevMonthData = await getDocs(prevMonthQuery);
+        const allDatesData = await getDocs(allDatesQuery);
 
-        setAmount(lastMonthData.docs.length);
+        setAmount(allDatesData.docs.length);
         setDiff(
           ((lastMonthData.docs.length - prevMonthData.docs.length) / prevMonthData.docs.length) *
             100
         );
       };
       fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
   return (
     <div className="widget">
       <div className="left">
         <span className="title">{data.title}</span>
-        <span className="subTitle">Added this month</span>
+        <span className="subTitle">Total number of {data.title}</span>
         <span className="counter">{amount}</span>
         <Link to={data.link} style={{ textDecoration: "none" }}>
         <span className="link">{data.linkTitle}</span>
         </Link>
       </div>
       <div className="right">
-      <div className={`percentage ${diff < 0 ? "negative" : "positive"}`}>
+      {/* <div className={`percentage ${diff < 0 ? "negative" : "positive"}`}>
           {diff < 0 ? <KeyboardArrowDownIcon/> : <KeyboardArrowUpIcon/> }
           {diff} %
-        </div>
+        </div> */}
         {data.icon}
       </div>
     </div>

@@ -14,13 +14,15 @@ const Settings = () => {
       <Sidebar/>
       <div className="homeContainer">
         <Navbar/>
-        <h1>Settings</h1>
-        <br />
-        <h2>System Color Modes</h2>
-        <div className="colorOptionWrap">
-          <div className="colorOption" onClick={()=> dispatch({type:"LIGHT"})}></div>
-          <div className="colorOption" onClick={()=> dispatch({type:"DARK"})}></div>
-      </div>
+        <section>
+          <h1>Settings</h1>
+          <br />
+          <h2>System Color Modes</h2>
+          <div className="colorOptionWrap">
+            <div className="colorOption" onClick={()=> dispatch({type:"LIGHT"})}></div>
+            <div className="colorOption" onClick={()=> dispatch({type:"DARK"})}></div>
+          </div>
+        </section>
       </div>
     </div>
   )

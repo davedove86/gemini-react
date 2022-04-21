@@ -8,7 +8,9 @@ const Reports = () => {
       <Sidebar/>
       <div className="homeContainer">
         <Navbar/>
-        <h1>Reports</h1>
+        <section>
+          <h1>Reports</h1>
+          </section>
       </div>
     </div>
   )

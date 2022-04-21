@@ -389,3 +389,7 @@ small,
   margin-top: 0;
   font-size: var(--text-small);
 }
+
+section {
+  padding: 20px;
+}
