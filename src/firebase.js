@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: process.env.AUTH_DOMAIN,
   projectId: "gemini-app-1",
-  storageBucket: process.env.STORAGE_BUCKET,
+  storageBucket: "gemini-app-1.appspot.com",
   messagingSenderId: process.env.MESSAGING_SENDER_ID,
   appId: process.env.APP_ID,
   measurementId: process.env.MEASUREMENT_ID,

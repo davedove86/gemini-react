@@ -1,7 +1,8 @@
 import './premise.scss'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Navbar from '../../components/navbar/Navbar'
-import Datatable from '../../components/datatable/Datatable'
+import Premisedatatable from '../../components/premisedatatable/Premisedatatable'
+
 
 const Premise = () => {
   return (
@@ -10,7 +11,7 @@ const Premise = () => {
       <div className="homeContainer">
         <Navbar/>
         <section>
-          <h1>Premises</h1>
+          <Premisedatatable/>
         </section>
       </div>
     </div>

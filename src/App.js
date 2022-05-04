@@ -8,10 +8,12 @@ import Settings from "./pages/settings/Settings";
 import Profile from "./pages/profile/Profile";
 import Login from "./pages/login/Login";
 import Single from "./pages/single/Single";
-import New from "./pages/new/New";
+import Newperson from "./pages/newperson/Newperson";
+import Newpremise from "./pages/newpremise/Newpremise";
+import Newtask from "./pages/newtask/Newtask";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { personInputs, premiseInputs } from "./formSource";
+import { personInputs, premiseInputs, taskInputs } from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
@@ -52,7 +54,14 @@ function App() {
               <Route path=":premiseId" element={<Single />} />
               <Route
                 path="new"
-                element={<New inputs={premiseInputs} title="Add new Premise" />}
+                element={
+                  <RequireAuth>
+                    <Newpremise
+                      inputs={premiseInputs}
+                      title="Add new Premise"
+                    />
+                  </RequireAuth>
+                }
               />
             </Route>
             <Route path="person">
@@ -76,7 +85,7 @@ function App() {
                 path="new"
                 element={
                   <RequireAuth>
-                    <New inputs={personInputs} title="Add new person" />
+                    <Newperson inputs={personInputs} title="Add new person" />
                   </RequireAuth>
                 }
               />
@@ -90,8 +99,22 @@ function App() {
                   </RequireAuth>
                 }
               />
-              <Route path=":taskId" element={<Tasks />} />
-              <Route path="new" element={<New />} />
+              <Route
+                path=":taskId"
+                element={
+                  <RequireAuth>
+                    <Single />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="new"
+                element={
+                  <RequireAuth>
+                    <Newtask inputs={taskInputs} title="Add new task" />
+                  </RequireAuth>
+                }
+              />
             </Route>
             <Route
               path="reports"

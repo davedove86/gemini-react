@@ -1,14 +1,14 @@
 import "./datatable.scss";
 import "../../style/dark.scss";
 import { DataGrid } from '@mui/x-data-grid';
-import { dataColumns } from "../../dataTableSource";
+import { personDataColumns, premiseDataColumns } from "../../dataTableSource";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { collection, getDocs, deleteDoc, doc, onSnapshot } from "firebase/firestore";
 import {db} from "../../firebase";
 
 
-const Datatable = () => {
+const Persondatatable = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -68,7 +68,7 @@ return () => {
       <div style={{ height: "100%", width: '100%' }}>
       <DataGrid className="datagrid"
         rows={data}
-        columns={dataColumns.concat(actionColumn)}
+        columns={personDataColumns.concat(actionColumn)}
         pageSize={10}
         rowsPerPageOptions={[5]}
         checkboxSelection
@@ -78,4 +78,4 @@ return () => {
   )
 };
 
-export default Datatable
+export default Persondatatable

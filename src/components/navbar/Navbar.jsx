@@ -19,12 +19,6 @@ const Navbar = () => {
           <SearchOutlinedIcon style={{color:"#fff"}}/>
         </div>
         <div className="items">
-          <Link to="#" style={{textDecoration:"none"}}>
-            <div className="item">
-              <LanguageOutlinedIcon className="icon" style={{marginRight:"6px"}}/>
-              English
-            </div>
-          </Link>
           <div className="item">
             <DarkModeOutlinedIcon className="icon" onClick={()=> dispatch({type:"TOGGLE"})}/>
           </div>

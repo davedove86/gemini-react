@@ -1,7 +1,7 @@
 import './person.scss'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Navbar from '../../components/navbar/Navbar'
-import Datatable from '../../components/datatable/Datatable'
+import Persondatatable from '../../components/persondatatable/Persondatatable'
 
 const Person = () => {
   return (
@@ -10,7 +10,7 @@ const Person = () => {
       <div className="homeContainer">
         <Navbar/>
         <section>
-          <Datatable/>
+          <Persondatatable/>
         </section>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import './tasks.scss'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Navbar from '../../components/navbar/Navbar'
+import Taskdatatable from '../../components/taskdatatable/Taskdatatable'
 
 const Tasks = () => {
   return (
@@ -9,7 +10,7 @@ const Tasks = () => {
       <div className="homeContainer">
         <Navbar/>
         <section>
-          <h1>Tasks</h1>
+          <Taskdatatable />
         </section>
       </div>
     </div>

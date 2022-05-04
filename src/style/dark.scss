@@ -21,6 +21,7 @@
   .navbar {
     color: rgb(229, 229, 229);
     border-color: rgb(229, 229, 229);
+    background-color: #222;
 
     .search {
       border-color: rgb(229, 229, 229);
@@ -78,5 +79,18 @@
   option {
     background-color: transparent;
     color: rgb(229, 229, 229);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: rgb(229, 229, 229);
+  }
+
+  .single .title {
+    color: var(--white);
   }
 }
