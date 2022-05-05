@@ -119,3 +119,30 @@ export const taskInputs = [
     placeholder: "Active, Pending, Closed",
   },
 ];
+
+export const reportsInputs = [
+  {
+    id: "name",
+    label: "Report Name",
+    type: "text",
+    placeholder: "Enter report name",
+  },
+  {
+    id: "officer",
+    label: "Officer",
+    type: "number",
+    placeholder: "Enter collar number",
+  },
+  {
+    id: "date",
+    label: "Date Uploaded",
+    type: "date",
+    placeholder: "Enter date",
+  },
+  {
+    id: "file",
+    label: "File",
+    type: "file",
+    placeholder: "Select file",
+  },
+];

@@ -54,7 +54,7 @@ const Widget = ({ type }) => {
         data={
           title: "Active Reports",
           link: "/reports",
-          linkTitle: "See all reports",
+          linkTitle: "See all Reports",
           query: "reports",
           icon:(
             <ArticleOutlinedIcon className="icon" style={{backgroundColor:"rgba(100, 57, 255, 0.10)", color:"#6439ff"}}/>

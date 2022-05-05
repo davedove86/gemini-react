@@ -11,9 +11,15 @@ import Single from "./pages/single/Single";
 import Newperson from "./pages/newperson/Newperson";
 import Newpremise from "./pages/newpremise/Newpremise";
 import Newtask from "./pages/newtask/Newtask";
+import Newreport from "./pages/newreport/Newreport";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { personInputs, premiseInputs, taskInputs } from "./formSource";
+import {
+  personInputs,
+  premiseInputs,
+  taskInputs,
+  reportsInputs,
+} from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
@@ -116,14 +122,32 @@ function App() {
                 }
               />
             </Route>
-            <Route
-              path="reports"
-              element={
-                <RequireAuth>
-                  <Reports />
-                </RequireAuth>
-              }
-            />
+            <Route path="reports">
+              <Route
+                index
+                element={
+                  <RequireAuth>
+                    <Reports />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path=":reportId"
+                element={
+                  <RequireAuth>
+                    <Single />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="new"
+                element={
+                  <RequireAuth>
+                    <Newreport inputs={reportsInputs} title="Add new report" />
+                  </RequireAuth>
+                }
+              />
+            </Route>
             <Route
               path="help"
               element={

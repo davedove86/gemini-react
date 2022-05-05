@@ -5,6 +5,7 @@ import Widget from '../../components/widget/Widget'
 import Featured from '../../components/featured/Featured'
 import Chart from '../../components/chart/Chart'
 import Table from '../../components/table/Table'
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
           <Chart title={"Temporary Event Notices"} aspect={2 / 1}/>
         </div>
           <div className="listContainer">
-            <div className="listTitle">Live Temporary Event Notices</div>
+            <div className="listTitle">Temporary Event Notices</div>
             <Table/>
           </div>
       </div>

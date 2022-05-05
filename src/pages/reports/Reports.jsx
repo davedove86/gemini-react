@@ -1,6 +1,7 @@
 import './reports.scss'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Navbar from '../../components/navbar/Navbar'
+import Reportsdatatable from '../../components/reportsdatatable/Reportsdatatable'
 
 const Reports = () => {
   return (
@@ -9,8 +10,8 @@ const Reports = () => {
       <div className="homeContainer">
         <Navbar/>
         <section>
-          <h1>Reports</h1>
-          </section>
+          <Reportsdatatable/>
+        </section>
       </div>
     </div>
   )

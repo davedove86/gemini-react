@@ -46,3 +46,15 @@ export const taskDataColumns = [
   { field: "duedate", headerName: "Due Date", width: "200" },
   { field: "status", headerName: "Status", width: "100" },
 ];
+
+export const reportsDataColumns = [
+  // { field: "id", headerName: "id", width: "200" },
+  { field: "name", headerName: "Name", width: "500" },
+  { field: "officer", headerName: "Officer", width: "150" },
+  { field: "date", headerName: "Date Uploaded", width: "200" },
+  {
+    field: "file",
+    headerName: "File",
+    width: "100",
+  },
+];
